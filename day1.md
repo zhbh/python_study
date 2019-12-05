@@ -25,7 +25,12 @@
 			3. url解析，url有协议、端口、路径、请求参数等等字段
 				1. urlparse 和 urlsplit 
 				2. 两者不同点是urlparse多了一个字段params，params是指url中有冒号：解析出来。
-
-
+	2. 爬虫实战	
+		1. 问题：有网站会识别是否爬虫访问，就会禁止url获取数据。
+			解决：模拟普通网站请求，对request.Request中referer和User-Agent设置值。
+			`request.Requst(url,header={User-Agent,referer},data,method='POST')`
+		2. 问题：对于post请求，可能需要数据进行编码和要求哪种编码类型，请求之后的数据也要解码和解码类型。
+			`data = parse.urlencode(data).encode('utf-8')`
+			`req.read().decode('utf-8')`
 	scrapy安装环境和初步了解
 	2. django安装环境和初步了解
