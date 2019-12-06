@@ -56,3 +56,20 @@
 			4. 保存cookie
 				- `cookiejar.save()`有些网页网页关闭就cookie失效，可以添加`save(ignore_discard=True)`
 				- 在第二步中，创建cookiejar之后，可以`cookiejar.load(ignore_discard=True)`
+3. request库
+	- get方法
+		1. 引用
+			`import request
+			resp = requset.get(full_url,encode(data),header)`
+		2. request返回的属性
+			- text
+				浏览器根据自己猜测进行解码，有可能出现乱码（unicode）
+			- content
+				网络传送和保存电脑，以bytes格式存在，用decode('utf-8')进行解码
+			- url
+				返回请求目标地址
+			- encoding
+				返回编码格式
+			- status_code
+				请求状态
+		3. 可以有type()的方法测试response.text的编码方式
