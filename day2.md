@@ -81,7 +81,7 @@
 	- proxies
 		- requests.get(proxies:{'http':'1.1.1.1:1000'})，尽量选择高匿名，不要选择透明（也会识别是代理地址）。
 	- session，这里session并不是web的session
-		- ```
+		```
 			session = requests.session()
 			session.post(url,headers)
 		  ```
