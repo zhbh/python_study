@@ -1,4 +1,4 @@
-###day2
+### day2
 
 1. 代理地址
 	- 原理：代理地址相当于中间商，先请求代理地址，代理地址再次请求目标地址，就是间接请求目标地址。
@@ -82,9 +82,9 @@
 		- requests.get(proxies:{'http':'1.1.1.1:1000'})，尽量选择高匿名，不要选择透明（也会识别是代理地址）。
 	- session，这里session并不是web的session
 		```
-			session = requests.session()
-			session.post(url,headers)
-		  ```
+		session = requests.session()
+		session.post(url,headers)
+	  	```
 	- 处理不信任的ssl证书
 		`request.get(...,verify=false)`,可以忽略ssl证书，否则会报错。
 
