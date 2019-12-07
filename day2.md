@@ -56,10 +56,10 @@
 			4. 保存cookie
 				- `cookiejar.save()`有些网页网页关闭就cookie失效，可以添加`save(ignore_discard=True)`
 				- 在第二步中，创建cookiejar之后，可以`cookiejar.load(ignore_discard=True)`
-3. request库
+3. requests库，注意有s复数
 	- get方法
 		1. 引用
-			`import request
+			`import requests
 			resp = requset.get(full_url,encode(data),header)`
 		2. request返回的属性
 			- text
@@ -73,3 +73,18 @@
 			- status_code
 				请求状态
 		3. 可以有type()的方法测试response.text的编码方式
+	- post方法，和get方法的参数差不多
+		- response返回时json格式，可以用response.json()方法返回字典数据格式，而response.text返回字符串格式。
+	- cookie
+		- `response.cookie` 返回cookie数据
+		- `response.cookie_dict()` 返回cookie的字典数据
+	- proxies
+		- requests.get(proxies:{'http':'1.1.1.1:1000'})，尽量选择高匿名，不要选择透明（也会识别是代理地址）。
+	- session，这里session并不是web的session
+		- ```
+			session = requests.session()
+			session.post(url,headers)
+		  ```
+	- 处理不信任的ssl证书
+		`request.get(...,verify=false)`,可以忽略ssl证书，否则会报错。
+

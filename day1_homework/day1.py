@@ -1,5 +1,4 @@
 from urllib import request,parse
-
 req = request.urlopen('http://www.budejie.com/')
 print(req.read())
-request.urlretrieve('http://www.budejie.com/','baidu.html')
+request.urlretrieve('http://www.budejie.com/','baidu1.html')
