@@ -65,7 +65,7 @@
 			- text
 				浏览器根据自己猜测进行解码，有可能出现乱码（unicode）
 			- content
-				网络传送和保存电脑，以bytes格式存在，用decode('utf-8')进行解码
+				网络传送和保存电脑，以bytes格式存在，用.decode('utf-8')进行解码  //可以查看网页的编码属性，gdk
 			- url
 				返回请求目标地址
 			- encoding
