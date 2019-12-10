@@ -1,8 +1,8 @@
 ### day1
 
-1. 学习内容
-	1. 爬虫知识
-		1. urllib库中request，主要针对网页请求，有两个主要方法urlopen和urlretrieve
+- 学习内容
+	- 爬虫知识
+		- urllib库中request，主要针对网页请求，有两个主要方法urlopen和urlretrieve
 			1. 引用request
 				`from urllib import request`
 			2. 使用urlopen，主要读取网页内容，注意的是url要包括'http://''
@@ -14,7 +14,7 @@
 			3. 使用urlretrieve，主要下载页面内容
 				1. 根据url下载整个网页，或网页某个图片、js、css文件等等
 					`request.urlretrieve('www.baidu.com','保存下来文件名字.html')`
-		2. urllib库中parse，有主要功能是对参数进行编码与解码，还有对url解析。
+		- urllib库中parse，有主要功能是对参数进行编码与解码，还有对url解析。
 			1. 引用parse
 				`from urllib import parse`
 			2. 编码与解码
@@ -25,7 +25,7 @@
 			3. url解析，url有协议、端口、路径、请求参数等等字段
 				1. urlparse 和 urlsplit 
 				2. 两者不同点是urlparse多了一个字段params，params是指url中有冒号：之后数据解析出来。
-	2. 爬虫实战	
+	- 爬虫实战	
 		1. 问题：有网站会识别是否爬虫访问，就会禁止url获取数据。
 			解决：模拟普通网站请求，对request.Request中referer和User-Agent设置值。
 			`request.Requst(url,header={User-Agent,referer},data,method='POST')`
